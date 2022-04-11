@@ -1,3 +1,4 @@
+// oop - object-oriented programmin - ez van a repo nevben
 //létrehozzuk a függvényt
 //példányosítás folyamata
 
@@ -7,6 +8,17 @@ function Poem({yearFromInternet, authorFromInternet, titleFromInternet, textFrom
     this.author = authorFromInternet
     this.title = titleFromInternet
     this.text = textFromInternet
+    this.makePage = function () {
+        console.log(
+            `
+            Title: ${this.title}
+
+            ${this.body}
+
+            Author: ${this.author}
+            ${this.year}
+        `);
+    }
 };
 
 const poemData = {
@@ -18,7 +30,6 @@ const poemData = {
     am ertelmem felragyog, 
     nem jovok mert itt vagyok`
 };
-
 
 //hogyan tudunk egy object constructorhoz uj kulcsot hozzaadni? Prototype
 Poem.prototype.lang = "Hungarian"
@@ -34,3 +45,5 @@ const favouritPoemOfAndras = new Poem(poemData);
 console.log(favouritPoemOfAndras.lang);
 console.log(favouritPoemOfAndras.__proto__);
 console.log(Poem.prototype);
+
+console.log(favPoem.makePage());
