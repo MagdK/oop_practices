@@ -17,6 +17,7 @@ const pdyfi = poemData.yearFromInternet;
 // console.log(pdyfi);
 
 // const {yearFromInternet, authorFromInternet} = poemData;
+// const {authorFromInternet, ...rest} = poemData
 
 // console.log(yearFromInternet);
 // console.log(authorFromInternet);
